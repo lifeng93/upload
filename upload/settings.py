@@ -124,4 +124,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+STATIC_ROOT = '/var/www/static/upload/'
+
 SOURCE_DIRS = os.path.join(BASE_DIR, 'source')
