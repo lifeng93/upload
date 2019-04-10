@@ -1,0 +1,14 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>pic2text</title>
+</head>
+<body>
+	<img src="/static/pic/logo.png" alt="logo" />
+	<form action="{% url 'pic2text:return_text' %}" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<p><input type="file" name="pic"></p>
+		<p><input type="submit" name="上传"></p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>result</title>
+	</head>
+	<body>
+		<p><a href="{% url 'pic2text:upload' %}" target="_parent">返回</a></p>
+		<h5>{{ filename }}</h5>
+		<textarea id="text" cols="160" rows="10" >
+			{{ text }}
+		</textarea>
+		<p><button onclick="copy_text()">一键复制</button></p>
+		<script>
+			function copy_text(){
+			var ele = document.getElementById("text");
+			ele.select();
+			document.execCommand("Copy");
+			}
+		</script>
+	</body>
+</html>
